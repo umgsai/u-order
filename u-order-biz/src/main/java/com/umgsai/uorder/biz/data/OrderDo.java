@@ -2,10 +2,11 @@ package com.umgsai.uorder.biz.data;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class OrderDo {
+public class OrderDo implements Serializable {
 
     private long id;
 
