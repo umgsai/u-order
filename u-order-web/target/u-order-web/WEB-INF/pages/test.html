@@ -84,56 +84,7 @@
 
 <script src="/static/layui/layui.js"></script>
 <script>
-    layui.config({
-        base: '/static/' //
-    }).extend({
-        index: 'lib/index' //
-    }).use(['index', 'user'], function(){
-        var $ = layui.$
-            ,setter = layui.setter
-            ,admin = layui.admin
-            ,form = layui.form
-            ,router = layui.router()
-            ,search = router.search;
 
-        form.render();
-
-        //
-        form.on('submit(LAY-user-login-submit)', function(obj){
-
-            //
-            admin.req({
-                url: layui.setter.base + 'json/user/login.js' //
-                ,data: obj.field
-                ,done: function(res){
-
-                    //
-                    layui.data(setter.tableName, {
-                        key: setter.request.tokenName
-                        ,value: res.data.access_token
-                    });
-
-                    //
-                    layer.msg('xxx', {
-                        offset: '15px'
-                        ,icon: 1
-                        ,time: 1000
-                    }, function(){
-                        location.href = '../'; //
-                    });
-                }
-            });
-
-        });
-
-
-        //
-        layer.msg('xxx', {
-            offset: '15px'
-            ,icon: 1
-        });
-
-    });
 </script>
 </body>
 </html>
