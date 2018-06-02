@@ -3,6 +3,5 @@
 <configuration>
     <mappers>
         <mapper resource="config/mappers/OrderMapper.xml" />
-        <!-- 连接配置文件 -->
     </mappers>
 </configuration>
