@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.umgsai.uorder.biz.dao.OrderDao">
+<mapper namespace="com.umgsai.uorder.biz.dao.OrderRequestDao">
     <cache/>
     <!--
         namespace 必须与对应的接口全类名一致
         id 必须与对应接口的某个对应的方法名一致
      -->
 
-    <resultMap type="com.umgsai.uorder.biz.data.OrderDo" id="orderDoMap">
+    <resultMap type="com.umgsai.uorder.biz.data.OrderRequestDo" id="orderRequestDoMap">
         <id property="id" column="id"/>
         <result property="bizId" column="biz_id"/>
-        <result property="status" column="status"/>
-        <result property="identifier" column="identifier"/>
+        <result property="bizData" column="biz_data"/>
         <result property="createTime" column="create_time"/>
         <result property="updateTime" column="update_time"/>
     </resultMap>
 
-    <select id="findById" parameterType="int" resultMap="orderDoMap">
-	  select * from u_order where id = #{id}
+    <select id="findById" parameterType="int" resultMap="orderRequestDoMap">
+	  select * from u_order_request where id = #{id}
     </select>
 
 </mapper>

@@ -3,5 +3,6 @@
 <configuration>
     <mappers>
         <mapper resource="config/mappers/OrderMapper.xml" />
+        <mapper resource="config/mappers/OrderRequestMapper.xml" />
     </mappers>
 </configuration>
