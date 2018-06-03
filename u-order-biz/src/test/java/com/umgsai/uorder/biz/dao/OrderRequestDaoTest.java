@@ -23,4 +23,12 @@ public class OrderRequestDaoTest {
         System.out.println(JSON.toJSONString(orderRequestDo));
         Assert.assertNotNull(orderRequestDo);
     }
+
+    @Test
+    public void testSave() {
+        OrderRequestDo orderRequestDo = new OrderRequestDo();
+        long id = orderRequestDao.save(orderRequestDo);
+        System.out.println(id);
+        System.out.println(JSON.toJSONString(orderRequestDo));
+    }
 }
