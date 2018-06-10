@@ -29,9 +29,19 @@
     basePackage 指定SQL映射文件/接口所在的包（自动扫描）
     sqlSessionFactory 引用上面定义的sqlSessionFactory
      -->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.umgsai.uorder.biz.dao"/>
-        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+        <!--<property name="basePackage" value="com.umgsai.uorder.biz.dao"/>-->
+        <!--<property name="sqlSessionFactory" ref="sqlSessionFactory"/>-->
+    <!--</bean>-->
+
+    <bean id="orderDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="com.umgsai.uorder.biz.dao.OrderDao" />
+        <property name="sqlSessionFactory" ref="sqlSessionFactory" />
+    </bean>
+
+    <bean id="orderRequestDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="com.umgsai.uorder.biz.dao.OrderRequestDao" />
+        <property name="sqlSessionFactory" ref="sqlSessionFactory" />
     </bean>
 
     <!--

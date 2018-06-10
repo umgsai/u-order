@@ -14,7 +14,7 @@
         <result property="createTime" column="create_time"/>
         <result property="updateTime" column="update_time"/>
     </resultMap>
-
+<!--
     <select id="findById" parameterType="int" resultMap="orderRequestDoMap">
 	  select * from u_order_request where id = #{id}
     </select>
@@ -25,6 +25,6 @@
         </selectKey>
       insert into u_order_request(biz_id, biz_data, create_time, update_time) values(#{bizId}, #{bizData}, now(), now())
     </insert>
-
+-->
 
 </mapper>

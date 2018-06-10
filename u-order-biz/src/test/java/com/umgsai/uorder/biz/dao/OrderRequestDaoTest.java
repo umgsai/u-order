@@ -19,7 +19,7 @@ public class OrderRequestDaoTest {
 
     @Test
     public void testFindById() {
-        OrderRequestDo orderRequestDo = orderRequestDao.findById(1);
+        OrderRequestDo orderRequestDo = orderRequestDao.findById(7);
         System.out.println(JSON.toJSONString(orderRequestDo));
         Assert.assertNotNull(orderRequestDo);
     }

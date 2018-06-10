@@ -1,5 +1,6 @@
 package com.umgsai.uorder.biz.data;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -14,7 +15,9 @@ public class OrderRequestDo implements Serializable {
 
     private String bizData;
 
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateTime;
 }
