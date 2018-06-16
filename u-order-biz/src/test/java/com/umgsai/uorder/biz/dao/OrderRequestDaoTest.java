@@ -1,6 +1,7 @@
 package com.umgsai.uorder.biz.dao;
 
 import com.alibaba.fastjson.JSON;
+import com.umgsai.uorder.api.dto.request.TestRequest;
 import com.umgsai.uorder.biz.data.OrderDo;
 import com.umgsai.uorder.biz.data.OrderRequestDo;
 import org.junit.Assert;
@@ -30,5 +31,11 @@ public class OrderRequestDaoTest {
         long id = orderRequestDao.save(orderRequestDo);
         System.out.println(id);
         System.out.println(JSON.toJSONString(orderRequestDo));
+    }
+
+    @Test
+    public void testSave1() {
+        TestRequest request = new TestRequest();
+//        request.s
     }
 }

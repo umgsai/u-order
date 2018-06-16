@@ -13,6 +13,8 @@ public class OrderRequestDo implements Serializable {
 
     private String bizId;
 
+    private String bizClass;
+
     private String bizData;
 
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")

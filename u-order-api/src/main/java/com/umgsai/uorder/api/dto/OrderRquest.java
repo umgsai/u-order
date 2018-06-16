@@ -11,6 +11,8 @@ public abstract class OrderRquest {
 
     private String bizId;
 
+    private String bizClass;
+
     private String bizData;
 
     private Date createTime;
