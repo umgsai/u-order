@@ -11,6 +11,7 @@
         <id property="id" column="id"/>
         <result property="bizId" column="biz_id"/>
         <result property="bizData" column="biz_data"/>
+        <result property="bizClass" column="biz_class"/>
         <result property="createTime" column="create_time"/>
         <result property="updateTime" column="update_time"/>
     </resultMap>

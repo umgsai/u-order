@@ -1,15 +1,13 @@
-package com.umgsai.uorder.biz.data;
+package com.umgsai.uorder.api.dto;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
-import java.io.Serializable;
 import java.util.Date;
 
 //@Data
-public class OrderRequestDo implements Serializable {
+public abstract class OrderRequest {
 
-    private long id;
+    private int id;
 
     private String bizId;
 
@@ -17,17 +15,15 @@ public class OrderRequestDo implements Serializable {
 
     private String bizData;
 
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateTime;
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

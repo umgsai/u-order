@@ -13,6 +13,6 @@ public interface OrderRequestDao {
     OrderRequestDo findById(int id);
 
     @Options(useGeneratedKeys=true, keyProperty="id")
-    @Insert("insert into u_order_request(biz_id, biz_data, create_time, update_time) values(#{bizId}, #{bizData}, now(), now())")
+    @Insert("insert into u_order_request(biz_id, biz_class, biz_data, create_time, update_time) values(#{bizId}, #{bizClass}, #{bizData}, now(), now())")
     long save(OrderRequestDo orderRequestDo);
 }
